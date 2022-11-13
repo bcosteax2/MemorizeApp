@@ -61,15 +61,16 @@ struct CardView: View {
     var body: some View {
         ZStack {
             let shape = RoundedRectangle(cornerRadius: 20)
+            let symbol = Text(content).font(.largeTitle)
             if isFaceUp {
                 shape
                     .foregroundColor(.white)
-                Text(content)
-                    .font(.largeTitle)
+                symbol
                 shape
                     .strokeBorder(lineWidth: 6)
                     .foregroundColor(.red)
             } else {
+                symbol
                 shape
                     .foregroundColor(.red)
             }
