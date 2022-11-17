@@ -77,7 +77,7 @@ struct CardView: View {
         }
         .rotation3DEffect(Angle.degrees(isFaceUp ? 180 : 0), axis: (0, 1, 0))
         .onTapGesture {
-            withAnimation(.linear(duration: 0.2)) {
+            withAnimation(Animation.linear(duration: 0.2)) {
                 self.isFaceUp = !self.isFaceUp
             }
         }
